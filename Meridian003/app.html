@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <link href="https://s3.amazonaws.com/codiqa-cdn/codiqa.ext.css" rel="stylesheet">
+  <link href="https://s3.amazonaws.com/codiqa-cdn/mobile/1.4.2/jquery.mobile-1.4.2.css" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="https://s3.amazonaws.com/codiqa-cdn/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+  <script src="https://s3.amazonaws.com/codiqa-cdn/codiqa.ext.js"></script>
+
+  <script src="script.js"></script>
+
+</head>
+<body>
+<div data-role="page" data-control-title="Home" id="page1">
+    <div data-theme="a" data-role="header">
+        <h1 class="ui-title">
+            Top5
+        </h1>
+    </div>
+    <div role="main" class="ui-content">
+        <div data-controltype="textblock">
+            <p>
+                <strong>
+                    Café&nbsp;in Chiang Mai
+                </strong>
+            </p>
+        </div>
+        <div style="" data-controltype="image">
+            <img style="width: 288px; height: 200px" src="https://www.picz.in.th/images/2018/06/13/4ZAJnt.jpg">
+        </div>
+        <ul data-role="listview" data-divider-theme="a" data-inset="true">
+            <li data-role="list-divider" role="heading">
+                Cafe
+            </li>
+            <li data-theme="a">
+                <a href="#page2" data-transition="slide">
+                    Akha Ama Café
+                </a>
+            </li>
+            <li data-theme="a">
+                <a href="#page4" data-transition="slide">
+                    Doppio Ristr8to
+                </a>
+            </li>
+            <li data-theme="a">
+                <a href="#page6" data-transition="slide">
+                    Bays Café
+                </a>
+            </li>
+            <li data-theme="a">
+                <a href="#page8" data-transition="slide">
+                    Asama Café
+                </a>
+            </li>
+            <li data-theme="a">
+                <a href="#page10" data-transition="slide">
+                    Overstand Café
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div data-theme="a" data-role="footer" data-position="fixed">
+        <h3 class="ui-title">
+            NCUT
+        </h3>
+    </div>
+</div>
+<div data-role="page" data-control-title="1" id="page2">
+    <div data-theme="a" data-role="header">
+        <h1 class="ui-title">
+            Akha Ama Café
+        </h1>
+        <a href="#page1" class="ui-btn ui-btn-left">
+            Back
+        </a>
+    </div>
+    <div role="main" class="ui-content">
+        <div data-controltype="textblock">
+            <p>
+                <strong>
+                    Opening Hours&nbsp;
+                </strong>
+                : 8:00 - 18:00 (closed Wednesday)&nbsp;
+            </p>
+        </div>
+        <div style="" data-controltype="image">
+            <img style="width: 288px; height: 200px" src="https://www.picz.in.th/images/2018/06/13/4ZPBP2.jpg">
+        </div>
+        <div style="" data-controltype="image">
+            <img style="width: 288px; height: 200px" src="https://www.picz.in.th/images/2018/06/13/4ZPk3y.jpg">
+        </div>
+        <div data-controltype="textblock">
+            <p>
+                Akha Ama cafe opened in 2010 and is a cosy cafe down a hidden soi in the
+                Santitham area, north of the Old City. There is an air conditioned indoor
+                area and a leafy outdoor area, shaded by trees. The cafe works as a social
+                enterprise, so the coffee farmers are given a fair wage and all profits
+                go back to the village that grows the beans. Most of the staff and the
+                founder of Akha Ama come from the hill tribe village and are very knowledgeable
+                about coffee. The cafe as well as the founder, Lee Ayu, have become quite
+                famous in Thailand and on weekends and public holidays the cafe is busy
+                with visitors. Although there are a range of hot and cold drinks served
+                at Akha Ama Café Chiang Mai, the main focus being on coffee. As well as
+                machine made coffee (a hot americano costing 40 Baht), cold brew, coffee
+                jelly and pour over coffee options are also available. Akha Ama cafe also
+                has a small range of cakes including blueberry cheesecake at 65 Baht.
+            </p>
+        </div>
+        <div class="ui-grid-a">
+            <div class="ui-block-a">
+                <a href="#page3" class="ui-btn ">
+                    Map
+                </a>
+            </div>
+            <div class="ui-block-b">
+                <a href="tel:0000000000" class="ui-btn ">
+                    Call
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div data-role="page" data-control-title="1.1" id="page3">
+    <div data-theme="a" data-role="header">
+        <h1 class="ui-title">
+            Map
+        </h1>
+        <a href="#page2" class="ui-btn ui-btn-left">
+            Back
+        </a>
+    </div>
+    <div role="main" class="ui-content">
+        <div id="googlemapsjs1" class="google-map" style="width: 288px; height: 200px; margin-left: auto; margin-right: auto">
+        </div>
+        <script type="text/javascript">
+                window.CodiqaControls && window.CodiqaControls.register('googlemaps', 'googlemapsjs1', {
+            ready: function(control) {
+
+                control.options = {
+                    zoom: 14,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+
+                control.el = document.getElementById(control._id);
+                control.map = new google.maps.Map(control.el, control.options);
+
+                var geocoder = new google.maps.Geocoder();
+                geocoder.geocode({
+                    'address': 'Chiangmai'
+                }, function(results, status) {
+                    if (status == google.maps.GeocoderStatus.OK) {
+
+                        var marker = new google.maps.Marker({
+                            map: control.map,
+                            position: results[0].geometry.location
+                        });
+                        control.center = results[0].geometry.location;
+                        control.map.setCenter(control.center);
+                    }
+                });
+
+            }
+        });
+        </script>
+    </div>
+</div>
+<div data-role="page" data-control-title="2" id="page4">
+    <div data-theme="a" data-role="header">
+        <h1 class="ui-title">
+            Doppio Ristr8to
+        </h1>
+        <a href="#page1" class="ui-btn ui-btn-left">
+            Back
+        </a>
+    </div>
+    <div role="main" class="ui-content">
+        <div data-controltype="textblock">
+            <p>
+                <strong>
+                    Opening Hours
+                </strong>
+                : 7:08 -18:00
+            </p>
+            <p>
+                <strong>
+                    Website
+                </strong>
+                : https://www.facebook.com/ristr8to/ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp; &nbsp; &nbsp;&nbsp;
+            </p>
+        </div>
+        <div style="" data-controltype="image">
+            <img style="width: 288px; height: 200px" src="https://www.picz.in.th/images/2018/06/13/4ZPvjy.jpg">
+        </div>
+        <div style="" data-controltype="image">
+            <img style="width: 288px; height: 200px" src="https://www.picz.in.th/images/2018/06/13/4ZPGvD.jpg">
+        </div>
+        <div data-controltype="textblock">
+            <p>
+                Doppio Ristr8to is widely considered to be the best coffee shop in Chiang
+                Mai. The owner worked for many years in Australia, won awards for his latte
+                art and brought back the secret skills of good coffee to Chiang Mai. The
+                shop on Nimmanhaemin Road is very small with lots of low tables, and is
+                always full. It has an indoor area that is air conditioned and lots of
+                outdoor seating in the sun. Doppio Ristr8to isn’t the type of cafe to sit
+                hours in, and people often come to drink their coffee, take photos and
+                then leave. Doppio Ristr8to only serves coffee and one non-caffeinated
+                chocolate drink. Their coffee menu is extensive and offers different coffee
+                styles from around the world including the flat white, cortado, Melbourne
+                and their famous signature drink the Doppio Ristr8to. They also offer customers
+                the choice of origin for their beans and have a wide variety from Thai
+                to Colombian or Ethiopian. A cappuccino made with Thai beans costs 68 Baht,
+                and with imported beans costs 88 Baht. There are also waffle sticks and
+                ice cream available as snacks.
+            </p>
+        </div>
+        <div class="ui-grid-a">
+            <div class="ui-block-a">
+                <a href="#page5" class="ui-btn ">
+                    Map
+                </a>
+            </div>
+            <div class="ui-block-b">
+                <a href="tel:0000000000" class="ui-btn ">
+                    Call
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div data-role="page" data-control-title="2.2" id="page5">
+    <div data-theme="a" data-role="header">
+        <h1 class="ui-title">
+            Map
+        </h1>
+        <a href="#page4" class="ui-btn ui-btn-left">
+            Back
+        </a>
+    </div>
+    <div role="main" class="ui-content">
+        <div id="googlemapsjs2" class="google-map" style="width: 288px; height: 200px; margin-left: auto; margin-right: auto">
+        </div>
+        <script type="text/javascript">
+                window.CodiqaControls && window.CodiqaControls.register('googlemaps', 'googlemapsjs2', {
+            ready: function(control) {
+
+                control.options = {
+                    zoom: 14,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+
+                control.el = document.getElementById(control._id);
+                control.map = new google.maps.Map(control.el, control.options);
+
+                var geocoder = new google.maps.Geocoder();
+                geocoder.geocode({
+                    'address': 'Chiangmai'
+                }, function(results, status) {
+                    if (status == google.maps.GeocoderStatus.OK) {
+
+                        var marker = new google.maps.Marker({
+                            map: control.map,
+                            position: results[0].geometry.location
+                        });
+                        control.center = results[0].geometry.location;
+                        control.map.setCenter(control.center);
+                    }
+                });
+
+            }
+        });
+        </script>
+    </div>
+</div>
+<div data-role="page" data-control-title="3" id="page6">
+    <div data-theme="a" data-role="header">
+        <h1 class="ui-title">
+            Bays Café
+        </h1>
+        <a href="#page1" class="ui-btn ui-btn-left">
+            Back
+        </a>
+    </div>
+    <div role="main" class="ui-content">
+        <div data-controltype="textblock">
+            <p>
+                <b>
+                    Opening Hours&nbsp;
+                </b>
+                : 07:30 - 20:00 &nbsp;
+            </p>
+        </div>
+        <div style="" data-controltype="image">
+            <img style="width: 288px; height: 200px" src="https://www.picz.in.th/images/2018/06/13/4ZPm8b.jpg">
+        </div>
+        <div style="" data-controltype="image">
+            <img style="width: 288px; height: 200px" src="https://www.picz.in.th/images/2018/06/13/4ZPIca.jpg">
+        </div>
+        <div data-controltype="textblock">
+            <p>
+                Bays Café Chiang Mai focuses on making coffee using the pour over method
+                so there is no machine, just an impressive display of drip coffee devices
+                for you to watch your coffee brew. Bays Cafe is attached to a restaurant
+                called Food4Thought and they share a large open air area in a relaxing
+                garden. There is a roof and indoor area to sit in, or you can sit at the
+                coffee bar with barista Bay himself. Bays Cafe has a small menu of different
+                coffee selections - hot or iced americanos or lattes (between 65 and 85
+                Baht), but Bays also imports a lot of different beans from around the world
+                and has a good choice of single origins to choose from. Ask him what beans
+                have recently arrived as it changes weekly. The Food4Thought restaurant
+                serves a wide variety of Thai fusion food with vegetarian, gluten free
+                and vegan options. Their popular wrap salads start at 129 Baht and their
+                menu also has burgers, pasta and unusual starters such as avocado fries.
+                Open Tuesday to Saturday, last orders at Bays cafe or Food4Thought is at
+                20:00.
+            </p>
+        </div>
+        <div class="ui-grid-a">
+            <div class="ui-block-a">
+                <a href="#page7" class="ui-btn ">
+                    Map
+                </a>
+            </div>
+            <div class="ui-block-b">
+                <a href="tel:0000000000" class="ui-btn ">
+                    Call
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div data-role="page" data-control-title="3.3" id="page7">
+    <div data-theme="a" data-role="header">
+        <h1 class="ui-title">
+            Map
+        </h1>
+        <a href="#page6" class="ui-btn ui-btn-left">
+            Back
+        </a>
+    </div>
+    <div role="main" class="ui-content">
+        <div id="googlemapsjs3" class="google-map" style="width: 288px; height: 200px; margin-left: auto; margin-right: auto">
+        </div>
+        <script type="text/javascript">
+                window.CodiqaControls && window.CodiqaControls.register('googlemaps', 'googlemapsjs3', {
+            ready: function(control) {
+
+                control.options = {
+                    zoom: 14,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+
+                control.el = document.getElementById(control._id);
+                control.map = new google.maps.Map(control.el, control.options);
+
+                var geocoder = new google.maps.Geocoder();
+                geocoder.geocode({
+                    'address': 'Chiangmai'
+                }, function(results, status) {
+                    if (status == google.maps.GeocoderStatus.OK) {
+
+                        var marker = new google.maps.Marker({
+                            map: control.map,
+                            position: results[0].geometry.location
+                        });
+                        control.center = results[0].geometry.location;
+                        control.map.setCenter(control.center);
+                    }
+                });
+
+            }
+        });
+        </script>
+    </div>
+</div>
+<div data-role="page" data-control-title="4" id="page8">
+    <div data-theme="a" data-role="header">
+        <h1 class="ui-title">
+            Asama Café
+        </h1>
+        <a href="#page1" class="ui-btn ui-btn-left">
+            Back
+        </a>
+    </div>
+    <div role="main" class="ui-content">
+        <div data-controltype="textblock">
+            <p>
+                <b>
+                    Asama Café Chiang Mai Hidden Coffee Shop in Chiang Mai
+                </b>
+            </p>
+            <p>
+                <strong>
+                    Opening Hours&nbsp;
+                </strong>
+                : 8:00 -16:00 (closed 1st and 15th day of the month) &nbsp;
+            </p>
+        </div>
+        <div style="" data-controltype="image">
+            <img style="width: 288px; height: 200px" src="https://www.picz.in.th/images/2018/06/13/4Zs4qZ.jpg">
+        </div>
+        <div style="" data-controltype="image">
+            <img style="width: 288px; height: 200px" src="https://www.picz.in.th/images/2018/06/13/4ZsN8I.jpg">
+        </div>
+        <div data-controltype="textblock">
+            <div data-controltype="image">
+                Asama Cafe is a small coffee shop with a great view of Doi Suthep Mountain.
+                It is about a 15 minute drive from the old city and hidden in a gated community.
+                It is hard to find but worth it if you are looking for hidden gem. The
+                cafe itself is one small room with four stools and a large, shiny, imported
+                coffee machine. There are more seats in the outdoor area, including a two
+                person swinging bench, which overlook a pond and the mountain. While Asama
+                Cafe is far from the Old City of Chiang Mai it is worth the journey for
+                coffee enthusiasts. Asama’s owner Mook is one of Thailand’s judges for
+                the national barista championships and serves up very good coffee from
+                a blend of imported beans. Her Café is a place for her to practice her
+                art. A cappuccino costs 60 Baht and the menu at Asama Cafe also has some
+                interesting coffee options including a sparkling espresso and espresso
+                con panna both at 90 Baht. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp;&nbsp;
+            </div>
+        </div>
+        <div class="ui-grid-a">
+            <div class="ui-block-a">
+                <a href="#page9" class="ui-btn ">
+                    Map
+                </a>
+            </div>
+            <div class="ui-block-b">
+                <a href="tel:0000000000" class="ui-btn ">
+                    Call
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div data-role="page" data-control-title="4.4" id="page9">
+    <div data-theme="a" data-role="header">
+        <h1 class="ui-title">
+            Map
+        </h1>
+        <a href="#page8" class="ui-btn ui-btn-left">
+            Back
+        </a>
+    </div>
+    <div role="main" class="ui-content">
+        <div id="googlemapsjs4" class="google-map" style="width: 288px; height: 200px; margin-left: auto; margin-right: auto">
+        </div>
+        <script type="text/javascript">
+                window.CodiqaControls && window.CodiqaControls.register('googlemaps', 'googlemapsjs4', {
+            ready: function(control) {
+
+                control.options = {
+                    zoom: 14,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+
+                control.el = document.getElementById(control._id);
+                control.map = new google.maps.Map(control.el, control.options);
+
+                var geocoder = new google.maps.Geocoder();
+                geocoder.geocode({
+                    'address': 'Chiangmai'
+                }, function(results, status) {
+                    if (status == google.maps.GeocoderStatus.OK) {
+
+                        var marker = new google.maps.Marker({
+                            map: control.map,
+                            position: results[0].geometry.location
+                        });
+                        control.center = results[0].geometry.location;
+                        control.map.setCenter(control.center);
+                    }
+                });
+
+            }
+        });
+        </script>
+    </div>
+</div>
+<div data-role="page" data-control-title="5" id="page10">
+    <div data-theme="a" data-role="header">
+        <h1 class="ui-title">
+            Overstand Café
+        </h1>
+        <a href="#page1" class="ui-btn ui-btn-left">
+            Back
+        </a>
+    </div>
+    <div role="main" class="ui-content">
+        <div data-controltype="textblock">
+            <p>
+                <b>
+                    Overstand Café Chiang Mai High Quality Coffee Shop in Chiang Mai Old City
+                </b>
+            </p>
+            <p>
+                <strong>
+                    Opening Hours
+                </strong>
+                : 8:00 - 14:00 (closed Tuesday) &nbsp;
+            </p>
+        </div>
+        <div style="" data-controltype="image">
+            <img style="width: 288px; height: 200px" src="https://www.picz.in.th/images/2018/06/13/4ZsyhE.jpg">
+        </div>
+        <div style="" data-controltype="image">
+            <img style="width: 288px; height: 200px" src="https://www.picz.in.th/images/2018/06/13/4ZsIVV.jpg">
+        </div>
+        <div data-controltype="textblock">
+            <p>
+                Overstand Café Chiang Mai offers breakfast, brunch and lunch, as well
+                as expertly made coffee. While you might not notice the cafe from a distance,
+                it is one of Chiang Mai’s favourite cafes for expats and tourists. The
+                cafe is set in a converted shophouse and decorated in grey and black with
+                lots of plants at the entrance. There are 5 small tables, a large table
+                that customers can share and a sofa to relax on. The staff are very friendly
+                and greet you with a smile when you arrive. Overstand Café Chiang Mai is
+                located along a small soi close to Thapae gate in the Old City and closes
+                at 14:00 daily. The owner is a barista from Australia so the coffee is
+                very good. Overstand also has tea and smoothie options for those who don’t
+                drink coffee. Their menu has regular coffee options and a special coconut
+                espresso at 85 Baht. Overstand serves a variety of sandwiches for breakfast
+                as well as muesli compote, and the most popular lunch option is the Cubano
+                sandwich. The Cubano is filled with pulled pork, ham, pickles, mustard
+                and cheddar cheese and costs 160 Baht.
+            </p>
+        </div>
+        <div class="ui-grid-a">
+            <div class="ui-block-a">
+                <a href="#page11" class="ui-btn ">
+                    Map
+                </a>
+            </div>
+            <div class="ui-block-b">
+                <a href="tel:0000000000" class="ui-btn ">
+                    Call
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div data-role="page" data-control-title="5.5" id="page11">
+    <div data-theme="a" data-role="header">
+        <h1 class="ui-title">
+            Map
+        </h1>
+        <a href="#page11" class="ui-btn ui-btn-left">
+            Back
+        </a>
+    </div>
+    <div role="main" class="ui-content">
+        <div id="googlemapsjs5" class="google-map" style="width: 288px; height: 200px; margin-left: auto; margin-right: auto">
+        </div>
+        <script type="text/javascript">
+                window.CodiqaControls && window.CodiqaControls.register('googlemaps', 'googlemapsjs5', {
+            ready: function(control) {
+
+                control.options = {
+                    zoom: 14,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+
+                control.el = document.getElementById(control._id);
+                control.map = new google.maps.Map(control.el, control.options);
+
+                var geocoder = new google.maps.Geocoder();
+                geocoder.geocode({
+                    'address': 'Chiangmai'
+                }, function(results, status) {
+                    if (status == google.maps.GeocoderStatus.OK) {
+
+                        var marker = new google.maps.Marker({
+                            map: control.map,
+                            position: results[0].geometry.location
+                        });
+                        control.center = results[0].geometry.location;
+                        control.map.setCenter(control.center);
+                    }
+                });
+
+            }
+        });
+        </script>
+    </div>
+</div>
+</body>
+</html>
